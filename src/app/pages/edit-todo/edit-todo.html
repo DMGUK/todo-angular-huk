@@ -1,0 +1,42 @@
+<div class="center-body">
+  <div class="container mt-5">
+    <h1 class="text-success">Edit Todo</h1>
+    <br />
+
+    <form (ngSubmit)="onUpdate()" #editForm="ngForm" class="mt-4">
+      <div class="mb-3">
+        <label class="text-label">Enter the task's title</label>
+        <br><br>
+        <input
+          type="text"
+          name="title"
+          [(ngModel)]="todo.title"
+          required
+          class="form-control bg-dark text-success border-0 styled-input"
+          style="font-size: 20px; font-family: 'JetBrains Mono', monospace;"
+        />
+      </div>
+      <br />
+      <div class="mb-4">
+        <label class="text-label">Enter the task's description</label>
+        <br><br>
+        <textarea
+          name="description"
+          [(ngModel)]="todo.description"
+          required
+          class="form-control bg-dark text-success border-0 styled-input"
+          rows="4"
+          style="width: 400px; font-size: 20px; font-family: 'JetBrains Mono', monospace;"
+        ></textarea>
+      </div>
+      <br />
+      <button
+        type="submit"
+        class="btn custom-file-upload"
+        style="font-size: 20px; font-family: 'JetBrains Mono', monospace;"
+      >
+        Update Task
+      </button>
+    </form>
+  </div>
+</div>

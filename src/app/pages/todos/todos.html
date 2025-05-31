@@ -1,0 +1,60 @@
+<div class="center-body">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="text-success">Your Todos</h1>
+      <a (click)="logout()" class="btn underline underline_danger">Logout</a>
+    </div>
+
+    <ul class="list-group mt-4">
+      <li *ngFor="let todo of todos" class="list-group-item bg-dark text-success">
+        <h5>{{ todo.title }}</h5>
+        <p>{{ todo.description }}</p>
+        <p>
+          Status:
+          <span [ngClass]="{
+              todo_complete: todo.isFinished,
+              todo_incomplete: !todo.isFinished
+            }">
+            {{ todo.isFinished ? 'Finished' : 'Not Finished' }}
+          </span>
+        </p>
+        <a (click)="toggleStatus(todo)" class="btn underline_safe" href="javascript:void(0)">
+          {{ todo.isFinished ? 'Mark as Unfinished' : 'Mark as Finished' }}
+        </a>
+        <br />
+        <a [routerLink]="['/todos', todo.id, 'edit']" class="btn btn-warning me-2 underline">Edit</a>
+        <br />
+        <a href="javascript:void(0)" (click)="deleteTodo(todo.id)" class="btn underline_danger">Delete</a>
+      </li>
+    </ul>
+
+    <br /><br />
+
+    <div class="pagination mt-4 d-flex justify-content-center align-items-center gap-3">
+      <button
+        class="btn_custom"
+        [disabled]="currentPage === 1"
+        (click)="goToPage(currentPage - 1)"
+      >
+        Previous
+      </button>
+      <span class="text-success" style="font-size: 20px; font-family: 'JetBrains Mono', monospace;">
+        Page {{ currentPage }} of {{ totalPages }}
+      </span>
+      <button
+        class="btn_custom"
+        [disabled]="currentPage === totalPages"
+        (click)="goToPage(currentPage + 1)"
+      >
+        Next
+      </button>
+    </div>
+
+
+
+
+    <br /><br />
+    <a routerLink="/todos/create" class="btn underline_safe mt-4">Create New Todo</a>
+    <br /><br />
+  </div>
+</div>

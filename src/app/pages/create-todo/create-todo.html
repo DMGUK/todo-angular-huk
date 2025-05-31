@@ -1,0 +1,53 @@
+<div class="center-body">
+  <div class="container mt-5">
+    <h1 class="text-success">Create Todo</h1>
+
+    <form (ngSubmit)="onSubmit()" class="mt-4" #todoForm="ngForm">
+      <label
+        for="title"
+        style="color: #f08c52; font-family: 'JetBrains Mono', monospace; font-size: 22px;"
+      >
+        Enter the task's title
+      </label>
+      <br><br>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        required
+        [(ngModel)]="todo.title"
+        class="form-control"
+        style="background-color: #0e0e0e; color: #4cc9f0; border: 1px solid #4cc9f0; font-family: 'JetBrains Mono', monospace; font-size: 18px;"
+      />
+
+      <br /><br />
+
+      <label
+        for="description"
+        style="color: #f08c52; font-family: 'JetBrains Mono', monospace; font-size: 22px;"
+      >
+        Enter the task's description
+      </label>
+      <br><br>
+      <textarea
+        id="description"
+        name="description"
+        required
+        [(ngModel)]="todo.description"
+        class="form-control"
+        style="background-color: #0e0e0e; color: #4cc9f0; border: 1px solid #4cc9f0; font-family: 'JetBrains Mono', monospace; font-size: 18px;"
+        rows="5"
+      ></textarea>
+
+      <br /><br />
+
+      <button
+        type="submit"
+        class="btn custom-file-upload"
+        style="font-size: 20px; font-family: 'JetBrains Mono', monospace;"
+      >
+        Add the Task
+      </button>
+    </form>
+  </div>
+</div>

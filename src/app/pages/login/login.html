@@ -1,0 +1,52 @@
+<div class="center-body">
+  <div class="container mt-5">
+    <h1 class="text-success">Login</h1>
+    <br>
+
+    <div *ngIf="error" class="flash-error">
+      Failed login: Incorrect username or password<br><br>
+    </div>
+
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm" class="mt-4">
+      <div class="mb-3">
+        <label for="username" class="text-label">Username: </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="credentials.username"
+          required
+          class="form-control bg-dark text-success border-0 styled-input"
+          style="font-size: 20px;"
+        />
+      </div>
+      <br>
+      <div class="mb-4">
+        <label for="password" class="text-label">Password: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="credentials.password"
+          required
+          class="form-control bg-dark text-success border-0 styled-input"
+          style="font-size: 20px;"
+        />
+      </div>
+      <br>
+
+      <button
+        type="submit"
+        class="btn custom-file-upload"
+        style="font-size: 20px; font-family: 'JetBrains Mono', monospace;"
+      >
+        Login
+      </button>
+    </form>
+
+    <br>
+    <a routerLink="/signup" class="btn nav-link mt-3 underline">Not logged in? Signup</a>
+    <br><br>
+    <a routerLink="/" class="btn nav-link mt-3 underline">Back to main page</a>
+  </div>
+</div>
