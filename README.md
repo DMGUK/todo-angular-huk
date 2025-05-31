@@ -84,8 +84,8 @@ This Angular project works in conjunction with the NestJS backend project linked
 ![Example of an updated pagination component styled with conditional disabling.](angular_readme_images/10.png)
 11. **Styled todo edit form resembling the design language of the creation form.**
 ![Styled todo edit form resembling the design language of the creation form.](angular_readme_images/11.png)
-12. **Snippet of the results of front-end actions from the Angular project in the database**
-![Snippet of the results of front-end actions from the Angular project in the database](angular_readme_images/12.png)
+12. **Screenshot of the results of front-end actions from the Angular project in the database**
+![Screenshot of the results of front-end actions from the Angular project in the database](angular_readme_images/12.png)
 
 ## Additional Resources
 
