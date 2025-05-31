@@ -54,14 +54,13 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Used BackEnd Projects
+## Used BackEnd Project
+[https://github.com/DMGUK/todo-app-nest-js](https://github.com/DMGUK/todo-app-nest-js)
 
-![https://github.com/DMGUK/todo-app-nest-js](https://github.com/DMGUK/todo-app-nest-js)
 
 This Angular project works in conjunction with the NestJS backend project linked above. The Angular frontend handles user interaction and presentation logic, while the backend manages authentication, task data, and persistence.
----
 
-## 📷 Interface Previews & Feature Descriptions
+## Interface Previews & Feature Descriptions
 
 1. **Main todo list interface showing a list of tasks and controls like edit, delete, and status toggle.**
 ![Main todo list interface showing a list of tasks and controls like edit, delete, and status toggle.](angular_readme_images/1.png)
@@ -87,7 +86,6 @@ This Angular project works in conjunction with the NestJS backend project linked
 ![Styled todo edit form resembling the design language of the creation form.](angular_readme_images/11.png)
 12. **Final version of the create form, now matching the "edit" form in design and layout.**
 ![Final version of the create form, now matching the "edit" form in design and layout.](angular_readme_images/12.png)
----
 
 ## Additional Resources
 
