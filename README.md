@@ -56,7 +56,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ## Used BackEnd Projects
 
-[https://github.com/DMGUK/todo-app-nest-js](https://github.com/DMGUK/todo-app-nest-js)
+![https://github.com/DMGUK/todo-app-nest-js](https://github.com/DMGUK/todo-app-nest-js)
 
 This Angular project works in conjunction with the NestJS backend project linked above. The Angular frontend handles user interaction and presentation logic, while the backend manages authentication, task data, and persistence.
 ---
